@@ -34,7 +34,7 @@ ${sessionScope.memberId}
 	</c:when>
 	<c:otherwise>
 		${sessionSope.memberId}님 환영합니다!<br>
-		<a href="/chat">채팅하러 가기</a><br>
+		<a href="${pageContext.request.contextPath}/chat">채팅하러 가기</a><br>
 		<a id="logout" href="javascript:void(0)">로그아웃</a>
 	</c:otherwise>
 </c:choose>
