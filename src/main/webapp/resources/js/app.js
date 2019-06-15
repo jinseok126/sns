@@ -19,6 +19,7 @@ function connect() {
         setConnected(true);
         console.log('Connected: ' + frame);
         stompClient.subscribe('/chat/app', function (greeting) {
+        	// alert(greeting);
             showGreeting(JSON.parse(greeting.body).content);
         });
     });
@@ -32,8 +33,9 @@ function disconnect() {
     console.log("Disconnected");
 }
 
-function sendName() {
-    stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val()}));
+function sendMsg(msg) {
+	// msg = id + " : " + msg;
+    stompClient.send("/app/hello", {}, JSON.stringify({'name': msg}));
 }
 
 $(function () {

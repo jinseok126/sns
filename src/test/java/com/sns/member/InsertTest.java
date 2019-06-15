@@ -24,9 +24,9 @@ public class InsertTest {
 		
 		MemberVO member = new MemberVO();
 		
-		member.setMemberId("admin");
+		member.setMemberId("spring1");
 		member.setMemberPw("123456");
-		member.setMemberName("관리자");
+		member.setMemberName("스프링1");
 		
 		member.setMemberPw(SHA256Util.getSHA256(member.getMemberPw()));
 		member.setMemberPw(SHA256Util.getEncrypt(member.getMemberPw(), member.getMemberSalt()));
